@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Aternos" />
+  <link rel="apple-touch-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkFAkmNERO2SsGwf0S6gbOgc-h37TaxUAXpg&s" />
+  <title>Aternos</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #f0f6ff;
+      color: #1a2a3a;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 24px env(safe-area-inset-bottom);
+      text-align: center;
+    }
+
+    /* subtle blue dot grid */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(37,99,235,.1) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* top blue glow */
+    body::after {
+      content: '';
+      position: fixed;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 300px;
+      background: radial-gradient(ellipse, rgba(59,130,246,.18) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 360px;
+    }
+
+    .logo {
+      width: 88px;
+      height: 88px;
+      border-radius: 22px;
+      margin: 0 auto 20px;
+      display: block;
+      box-shadow: 0 8px 32px rgba(37,99,235,.22);
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      color: #0f172a;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: .875rem;
+      color: #64748b;
+      margin-bottom: 40px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 36px;
+      text-align: left;
+    }
+
+    .step {
+      background: #ffffff;
+      border: 1px solid #dbeafe;
+      border-radius: 16px;
+      padding: 16px 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      box-shadow: 0 2px 12px rgba(37,99,235,.07);
+    }
+
+    .step-num {
+      background: #2563eb;
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 800;
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .step-text {
+      font-size: .875rem;
+      line-height: 1.55;
+      color: #475569;
+    }
+
+    .step-text strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    .icon-share {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      margin: 0 2px;
+      position: relative;
+      top: -1px;
+    }
+
+    .arrow-hint {
+      font-size: .8rem;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .bounce {
+      animation: bounce 1.6s ease-in-out infinite;
+      display: inline-block;
+      color: #2563eb;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(5px); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+  <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkFAkmNERO2SsGwf0S6gbOgc-h37TaxUAXpg&s" alt="Aternos" />
+  <h1>Add to Home Screen</h1>
+  <p class="subtitle">Follow these steps to install Aternos as an app on your iPhone.</p>
+
+  <div class="steps">
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        Tap the
+        <svg class="icon-share" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2v12M8 6l4-4 4 4" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 14v6h16v-6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <strong>Share</strong> button at the bottom of Safari — it looks like a box with an arrow pointing up.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        Scroll down in the share sheet and tap <strong>Add to Home Screen</strong>.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        Tap <strong>Add</strong> in the top right corner. That's it — the app icon will appear on your home screen!
+      </div>
+    </div>
+
+  </div>
+
+  <p class="arrow-hint"><span class="bounce">↓</span> Share button is down there</p>
+</div>
+
+<script>
+  if (window.navigator.standalone === true) {
+    window.location.replace("https://aternos.org/go/");
+  }
+</script>
+
+</body>
+</html>
